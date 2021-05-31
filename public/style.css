@@ -11,6 +11,16 @@
   font-display: swap;
 }
 
+/* Global Styles */
+:root {
+  --primary-color: #215a3f;
+  --secondary-color: #319046;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,7 +36,7 @@ body {
   line-height: 1.6;
   max-width: 600px;
   margin: 40px auto;
-  background-color: #305476;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -51,7 +61,7 @@ header {
 .task {
   margin: 20px 0;
   padding: 15px 25px;
-  background: #316290;
+  background: var(--secondary-color);
   box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
@@ -67,6 +77,6 @@ header {
 .task .tags {
   margin-top: 20px;
   padding: 5px 10px;
-  background: #305476;
+  background: var(--primary-color);
   color: #fff;
 }

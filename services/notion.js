@@ -23,7 +23,6 @@ module.exports = async function getTasks() {
   const { results } = await notion.request(payload);
 
   const tasks = results.map((i) => {
-    console.log(i.properties.Description.rich_text[0]);
     return {
       id: i.id,
       title: i.properties.Name.title[0].text.content,

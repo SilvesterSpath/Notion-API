@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Task from './Task';
 
-const Tasks = ({ getTasks }) => {
-  const task = {
-    title: 'Thistitle',
-    date: 'thisDAte',
-    description: 'thisDescription',
-  };
+const Tasks = ({ getTasks, tasks }) => {
   return (
     <div>
-      <Task getTasks={getTasks} task={task} />
+      <Task getTasks={getTasks} tasks={tasks} />
     </div>
   );
 };

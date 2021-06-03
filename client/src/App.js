@@ -10,18 +10,12 @@ const App = () => {
   const getTasks = async () => {
     setLoading(true);
 
-    const res = await axios.get('/tasks');
+    let res = await axios.get('/tasks');
 
-    console.log(res.data);
+    console.log('res.data:', res.data);
+    setTasks(res.data);
     setLoading(false);
-    const data = await res.data;
-    return data;
   };
-
-  /*   const addTasksTo = async () => {
-    const tasks = await getTasks();
-    console.log(tasks);
-  }; */
 
   return (
     <div>
@@ -30,7 +24,7 @@ const App = () => {
         <h3>Upcoming Tasks</h3>
       </header>
       <main>
-        <Tasks getTasks={getTasks} />
+        <Tasks getTasks={getTasks} tasks={tasks} />
       </main>
     </div>
   );

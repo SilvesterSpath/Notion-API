@@ -24,7 +24,7 @@ const App = () => {
         <h3>Upcoming Tasks</h3>
       </header>
       <main>
-        <Tasks loading={loading} getTasks={getTasks} tasks={tasks} />
+        <Tasks getTasks={getTasks} tasks={tasks} />
       </main>
     </div>
   );

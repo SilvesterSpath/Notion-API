@@ -1,19 +1,28 @@
 const dotenv = require('dotenv').config();
 const { Client } = require('@notionhq/client');
 
-// Init Client
+let notion_token;
+let notion_database_id;
 
+if (process.env.NODE_ENV !== 'production') {
+  notion_token = process.env.NOTION_TOKEN;
+  notion_database_id = process.env.NOTION_DATABASE_ID;
+} else {
+  notion_token = process.env.TOKEN;
+  notion_database_id = process.env.DATABASE_ID;
+}
+
+// Init Client
 const notion = new Client({
-  auth: process.env.NOTION_TOKEN,
+  auth: notion_token,
 });
 
 // List Database data
-
 const listDatabases = async () => {
   const res = await notion.databases.list();
 };
 
-const databaseId = process.env.NOTION_DATABASE_ID;
+const databaseId = notion_database_id;
 
 module.exports = async function getTasks() {
   const payload = {

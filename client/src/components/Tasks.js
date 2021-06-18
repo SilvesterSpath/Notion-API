@@ -15,11 +15,7 @@ const Tasks = ({ getTasks, tasks, loading }) => {
       ) : (
         <>
           {tasks.map((i) => {
-            return (
-              <>
-                <Task key={i.id} task={i} />
-              </>
-            );
+            return <Task key={i.id} task={i} />;
           })}
         </>
       )}

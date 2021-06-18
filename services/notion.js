@@ -12,13 +12,6 @@ if (process.env.NODE_ENV !== 'production') {
   notion_database_id = process.env.DATABASE_ID;
 }
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/client/build')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
-
 // Init Client
 const notion = new Client({
   auth: notion_token,

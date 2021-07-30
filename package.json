@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://silvesterspath.github.io/Notion-API",
+  "homepage": "https://spathnotionapi.herokuapp.com/",
   "scripts": {
-    "start": "node index",
+    "start": "NODE_ENV=production node index",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
@@ -22,6 +22,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "gh-pages": "^3.2.0",
+    "http-proxy-middleware": "^2.0.1",
     "nodemon": "^2.0.7"
   }
 }

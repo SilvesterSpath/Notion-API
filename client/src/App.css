@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 /* Global Styles */
 :root {
-  --primary-color: #215a3f;
+  --primary-color: #c0e2d2;
   --secondary-color: #319046;
   --dark-color: #333333;
   --light-color: #f4f4f4;
@@ -35,6 +35,9 @@ body {
 
 header {
   text-align: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--dark-color);
 }
 
 #loading {
@@ -55,7 +58,7 @@ header {
   margin: 20px 0;
   padding: 15px 25px;
   background: var(--secondary-color);
-  box-shadow: 4px 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
 
